@@ -33,8 +33,6 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println(config)
-
 	if *help {
 		fmt.Println("This program demonstrates a simple parsing of tender sites")
 		fmt.Println()
@@ -62,7 +60,7 @@ func main() {
 
 			case d := <-ch:
 				fmt.Println(d.String())
-				time.Sleep(100 * time.Millisecond)
+				time.Sleep(1000 * time.Millisecond)
 			}
 		}
 	}
@@ -77,7 +75,7 @@ func main() {
 
 			case d := <-ch:
 				fmt.Println(d.String())
-				time.Sleep(100 * time.Millisecond)
+				time.Sleep(1000 * time.Millisecond)
 			}
 		}
 	}
