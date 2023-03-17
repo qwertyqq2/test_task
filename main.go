@@ -60,7 +60,7 @@ func main() {
 
 			case d := <-ch:
 				fmt.Println(d.String())
-				time.Sleep(1000 * time.Millisecond)
+				time.Sleep(200 * time.Millisecond)
 			}
 		}
 	}
@@ -75,7 +75,7 @@ func main() {
 
 			case d := <-ch:
 				fmt.Println(d.String())
-				time.Sleep(1000 * time.Millisecond)
+				time.Sleep(200 * time.Millisecond)
 			}
 		}
 	}
