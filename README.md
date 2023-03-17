@@ -6,9 +6,11 @@ information about tenders. In my case, the site was selected https://www.rts-ten
 
 ### Installation
 
-    git clone github.com/qwertyqq2/test_task
+    git clone https://github.com/qwertyqq2/test_task
     
     cd test_task
+
+    go build .
 
 
 ### Usage
