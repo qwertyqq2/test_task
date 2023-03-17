@@ -1,17 +1,17 @@
 
-### Test task - parsing data from tender sites
+## Test task - parsing data from tender sites
 
 The task is to parse a website containing
 information about tenders. In my case, the site was selected https://www.rts-tender.ru . At the same time , the same problem was solved for https://www.etp-ets.ru, as a test
 
-#### Installation
+### Installation
 
     git clone github.com/qwertyqq2/test_task
     
     cd test_task
 
 
-#### Usage
+### Usage
 
     ./main -rts=true
 
@@ -19,7 +19,7 @@ or
 
     ./main -etp=true
 
-#### Inside
+### Inside
 
 Since different pages display their data differently, I decided to create a common interface for all parsers.
 
@@ -39,4 +39,17 @@ Since different pages display their data differently, I decided to create a comm
 
 
 
+### Example
+
+etp := req.NewEtp()
+ch := etp.SendRequest(ctx)
+for {
+	select {
+	    case <-ctx.Done():
+			return
+
+		case d := <-ch:
+			fmt.Println(d.String())
+	}
+}
 
