@@ -41,15 +41,25 @@ Since different pages display their data differently, I decided to create a comm
 
 ### Example
 
-etp := req.NewEtp()
-ch := etp.SendRequest(ctx)
-for {
-	select {
-	    case <-ctx.Done():
-			return
+    
+    etp := req.NewEtp() //new parser for https://www.etp-ets.ru/
+    
+    ch := etp.SendRequest(ctx) // the beginning of the parsing process
+    
+    for {
+    
+        select {
+    
+            case <-ctx.Done():
+    
+                return
 
-		case d := <-ch:
-			fmt.Println(d.String())
-	}
-}
+    
+            case d := <-ch:
+    
+                fmt.Println(d.String())
+    
+        }
+    
+    }
 
