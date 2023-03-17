@@ -54,8 +54,8 @@ Since different pages display their data differently, I decided to create a comm
             case <-ctx.Done():
                 return
     
-            case d := <-ch:
-                fmt.Println(d.String())
+            case data := <-ch:
+                fmt.Println(data.String())
         }
     
     }
