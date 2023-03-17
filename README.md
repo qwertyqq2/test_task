@@ -49,16 +49,11 @@ Since different pages display their data differently, I decided to create a comm
     for {
     
         select {
-    
             case <-ctx.Done():
-    
                 return
-
     
             case d := <-ch:
-    
                 fmt.Println(d.String())
-    
         }
     
     }
